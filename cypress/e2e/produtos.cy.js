@@ -48,7 +48,7 @@ describe("Testes da Funcionalidade Produtos", () => {
 	it("Deve validar mensagem de erro ao cadastrar produto repetido", () => {
 		cy.cadastrarProduto(
 			token,
-			"Produto EBAC 47583992",
+			"Samsung 60 polegadas",
 			250,
 			"Descrição do produto novo",
 			180
@@ -66,7 +66,7 @@ describe("Testes da Funcionalidade Produtos", () => {
 				url: `produtos/${id}`,
 				headers: { authorization: token },
 				body: {
-					nome: "Produto Editado 854839",
+					nome: "Produto Editado 456678",
 					preco: 100,
 					descricao: "Produto editado",
 					quantidade: 100,

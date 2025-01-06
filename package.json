@@ -6,8 +6,7 @@
 	"scripts": {
 		"test": "npx cypress run",
 		"cy:dash": "npx cypress run --record --key 4dc24b6e-b617-4890-bdcf-a5dfc55968fa",
-		"start": "npx serverest",
-		"cy:run": "npx cypress run"
+		"start": "npx serverest"
 	},
 	"keywords": [],
 	"author": "",
