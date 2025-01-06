@@ -15,12 +15,12 @@ pipeline {
        }
        stage('Subir servidor'){
         steps {
-          sh 'npx serverest'
+          sh 'npm start'
         }
        }
        stage('Executar Testes') {
          steps {
-           sh 'NO_COLOR=1 npm test'
+           sh 'NO_COLOR=1 npm run cy:run-ci'
          }
        }
    }
