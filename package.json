@@ -4,9 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "npx cypress run",
+		"test": "npm run cy:run",
 		"cy:dash": "npx cypress run --record --key 4dc24b6e-b617-4890-bdcf-a5dfc55968fa",
-		"start": "npx serverest"
+		"start": "npx serverest",
+		"cy:run": "npx cypress run",
+		"cy:run-ci": "start-server-and-test start http://localhost:3000/usuarios test"
 	},
 	"keywords": [],
 	"author": "",
