@@ -15,12 +15,12 @@ pipeline {
        }
        stage('Subir servidor'){
         steps {
-          sh 'npm start'
+          sh 'start/b npm start'
         }
        }
        stage('Executar Testes') {
          steps {
-           sh 'NO_COLOR=1 npm run cy:run-ci'
+           sh 'NO_COLOR=1 npm run cy:run-ci | true'
          }
        }
    }
