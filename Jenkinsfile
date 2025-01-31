@@ -15,7 +15,7 @@ pipeline {
        }
        stage('Subir servidor'){
         steps {
-          sh 'start/b npm start'
+          sh 'start /b npm start'
         }
        }
        stage('Executar Testes') {
