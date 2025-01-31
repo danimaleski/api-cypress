@@ -8,11 +8,6 @@ pipeline {
            git branch: 'main', url: 'https://github.com/danimaleski/api-cypress.git'
          }
        }
-      stage('Instalar dependências Jenkins') {
-         steps {
-           sh 'apt install npm'
-         }
-       }
        stage('Instalar dependências') {
          steps {
            sh 'npm install'
