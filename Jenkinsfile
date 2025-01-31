@@ -5,12 +5,7 @@ pipeline {
    stages {
        stage('Repositório') {
          steps {
-           git branch: 'main', url: 'http://github.com/danimaleski/api-cypress.git'
-         }
-       }
-       stage('Instalar dependências') {
-         steps {
-           sh 'npm install'
+           git branch: 'main', url: 'https://github.com/danimaleski/api-cypress.git'
          }
        }
        stage('Test') {
@@ -18,6 +13,11 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
+       stage('Instalar dependências') {
+         steps {
+           sh 'npm install'
+         }
+       }
        stage('Subir servidor'){
         steps {
           sh 'start /b npm start'
