@@ -5,7 +5,7 @@ pipeline {
    stages {
        stage('Repositório') {
          steps {
-           git branch: 'main', url: 'https://github.com/danimaleski/api-cypress.git'
+           git branch: 'main', url: 'http://github.com/danimaleski/api-cypress.git'
          }
        }
        stage('Instalar dependências') {
