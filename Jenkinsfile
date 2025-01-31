@@ -10,7 +10,7 @@ pipeline {
        }
       stage('Instalar dependências Jenkins') {
          steps {
-           sh 'sudo apt install npm'
+           sh 'apt install npm'
          }
        }
        stage('Instalar dependências') {
