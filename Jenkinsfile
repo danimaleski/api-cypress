@@ -10,8 +10,8 @@ pipeline {
        }
        stage(node){
         steps{
-          def nodejs = tool name: 'NodeJS', type:'jenkins.plugins.nodejs.tools.NodeJSInstallation'
-          env.PATH="${noddejs}/bin:bin:${env.PATH}"
+          sh def nodejs = tool name: 'NodeJS', type:'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+          sh env.PATH="${noddejs}/bin:bin:${env.PATH}"
         }
        }
       stage('Instalar dependências') {
