@@ -8,15 +8,17 @@ pipeline {
            git branch: 'main', url: 'https://github.com/danimaleski/api-cypress.git'
          }
        }
-       node{
-        def nodejs = tool name: 'NodeJS', type:'jenkins.plugins.nodejs.tools.NodeJSInstallation'
-        env.PATH="${noddejs}/bin:bin:${env.PATH}"
-        stage('Instalar dependências') {
-         steps {
-           sh 'npm install'
-         }
+       stage(node){
+        steps{
+          def nodejs = tool name: 'NodeJS', type:'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+          env.PATH="${noddejs}/bin:bin:${env.PATH}"
         }
        }
+      stage('Instalar dependências') {
+        steps {
+          sh 'npm install'
+        }
+      }
        stage('Subir servidor'){
         steps {
           sh 'start /b npm start'
